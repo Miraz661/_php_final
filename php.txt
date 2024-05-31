@@ -87,3 +87,90 @@ Q3-->c
 	.gnihtyreve ton tub,gnihtyna od nac uoY
 	7
 	You cannot do anything,but not everything.
+
+Q4-->a
+	
+	CREATE TABLE IF NOT EXISTS users (
+ 		userId int(50) PRIMARY KEY AUTO_INCREMENT,
+ 		username varchar(50) NOT NULL,
+ 		password varchar(50) NOT NULL,
+ 		reg_date datetime NOT NULL
+ 	);
+	
+	INSERT INTO users(userid,username,password,reg_date) values(null,'Miraz','1234#$ab','2024-05-31 22:43:05');
+
+Q4-->b
+	<?php
+  $conn = mysqli_connect("localhost:3306","root","","mydb");
+  if (mysqli_connect_errno()){
+    echo "Failed to connect to database";
+  }
+  if(isset($_POST['submit'])){
+    $sid = $_POST['sid'];
+    $fName = $_POST['fname'];
+    $lName = $_POST['lname'];
+    $email = $_POST['email'];
+    $sql = "INSERT INTO studentinfo VALUES('$sid','$fName','$lName','$email')";
+    $res = mysqli_query($conn,$sql);
+    if($res){
+        echo "Student Added";
+    }else{
+        echo "Error";
+    }
+  }else{
+    echo "not sub";
+  }
+  mysqli_close($conn);
+?>
+
+
+Q5-->a
+	The GET method is used to request data from a specified resource. Data sent by the GET method is appended to the URL as query strings.
+	The POST method is used to submit data to be processed to a specified resource. Data sent by the POST method goes through the HTTP message body, not the URL.
+	The REQUEST method is a superglobal array that contains data from both $_GET, $_POST, and $_COOKIE. It is a combination of these three superglobal arrays.
+
+Q5-->b
+	MVC (Model-View-Controller) is a design pattern widely used in web development to separate concerns within an application. This separation of concerns makes it easier to manage and scale applications by dividing the application logic into three interconnected components: Model, View, and Controller.
+	Model:Interacts with the database and manages data operations.
+	View :Manages the user interface and presentation.
+	Controller: Processes user input and updates the Model and View accordingly.
+
+Q5-->c
+	<?php
+    		$sm="";
+    		if(isset($_POST['submit'])){
+        		$num1 = $_POST['num1'];
+        		$num2 = $_POST['num2'];
+        		$num3 = $_POST['num3'];
+        		if($num1 < $num2){
+            			if($num1 < $num3){
+                			$sm = $num1;
+            			}else{
+                			$sm = $num3;
+            			}
+        		}else{
+            			if($num2 < $num3){
+                			$sm = $num2;
+            			}else{
+                			$sm = $num3;
+            			}
+        		}
+    		}
+	?>
+
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+    		<title>Document</title>
+	</head>
+	<body>
+    		<form action="" method="POST">
+        		<input type="text" name="num1">
+        		<input type="text" name="num2">
+        		<input type="text" name="num3">
+        		<input type="submit" value="Result" name="submit">
+    		</form>
+    		<h1>The smallest number is : <?php echo $sm ?></h1>
+	</body>
+	</html>
