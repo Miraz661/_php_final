@@ -1,0 +1,45 @@
+Q1-->a 
+List 3 advantages of user define function in programming language.And write a php program to find the largest value among 3 numbers.
+	Code Reusability: User-defined functions allow for code to be reused multiple times within a program, reducing redundancy.
+	Modularity: By breaking down a program into smaller, manageable pieces, it becomes easier to understand, debug, and test.
+	Abstraction: Functions provide a way to abstract complex operations behind a simple interface.
+	<?php
+    		$num1 = 10;
+    		$num2 = 25;
+    		$num3 = 15;
+    		if($num1 > $num2){
+        		if($num1 > $num3){
+        	    		echo "Largest number is : $num1 ";
+        		}else{
+            			echo "Largest number is : $num3 ";
+        		}
+    		}else{
+        		if($num2 > $num3){
+            			echo "Largest number is : $num2 ";
+        		}else{
+            			echo "Largest number is : $num3 ";
+        		}
+    		}
+	?>
+
+
+Q1-->b 
+	<?php
+    		$result = array(
+        			array(
+            				array("Name","Subject1","Subject2"),
+            				array("A",75,88),
+            				array("B",77,80),
+            				array("C",78,90)
+        			)
+    			);
+    		$studentC = $result[0][3];
+    		echo "Result of student C are : $studentC[1],$studentC[2]";
+	?>
+
+Q1-->c 
+	The primary reason an end user cannot see the PHP code when visiting a website built with PHP is that PHP is a server-side scripting language. This means that PHP code is executed on the server before the web page is sent to the user's web browser.
+
+Q2-->a
+	A PHP session is a way to store information (in variables) to be used across multiple pages in a web application. Unlike cookies, the information is not stored on the user's computer but on the server, which makes it more secure. 
+	
