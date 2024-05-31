@@ -83,14 +83,14 @@ Q3-->a
 Q3-->b
 	CT code.
 Q3-->c
-	39
-	.gnihtyreve ton tub,gnihtyna od nac uoY
+	40
+	.gnihtyreve ton tub ,gnihtyna od nac uoY
 	7
-	You cannot do anything,but not everything.
+	You cannot do anything, but not everything.
 
 Q4-->a
 	
-	CREATE TABLE IF NOT EXISTS users (
+	CREATE TABLE users (
  		userId int(50) PRIMARY KEY AUTO_INCREMENT,
  		username varchar(50) NOT NULL,
  		password varchar(50) NOT NULL,
@@ -117,8 +117,6 @@ Q4-->b
     }else{
         echo "Error";
     }
-  }else{
-    echo "not sub";
   }
   mysqli_close($conn);
 ?>
