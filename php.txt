@@ -83,4 +83,7 @@ Q3-->a
 Q3-->b
 	CT code.
 Q3-->c
-	CT code.
+	39
+	.gnihtyreve ton tub,gnihtyna od nac uoY
+	7
+	You cannot do anything,but not everything.
