@@ -36,7 +36,8 @@ Q1-->b
 	?>
 
 Q1-->c 
-	The primary reason an end user cannot see the PHP code when visiting a website built with PHP is that PHP is a server-side scripting language. This means that PHP code is executed on the server before the web page is sent to the user's web browser.
+	The primary reason an end user cannot see the PHP code when visiting a website built with PHP is that PHP is a server-side scripting language. 
+	This means that PHP code is executed on the server before the web page is sent to the user's web browser.
 
 Q2-->a
 	A PHP session is a way to store information (in variables) to be used across multiple pages in a web application. Unlike cookies, the information is not stored on the user's computer but on the server, which makes it more secure.
@@ -54,23 +55,15 @@ Q2-->a
 	?>
 
 Q2-->b
-	Web security is an essential aspect of modern web development and maintenance, aimed at protecting web applications and their users from a variety of threats. By implementing robust security measures, adhering to best practices, and staying informed about emerging threats, organizations can significantly reduce the risk of security breaches and ensure the safety and integrity of their online services.
+	Web security is an essential aspect of modern web development and maintenance, aimed at protecting web applications and their users from a variety of threats.
 Q2-->c
 	<?php
     		$file = 'myfile.txt';
-    		if (file_exists($file)) {
-        		$file_o = fopen($file, 'r');
-        		if ($file_o) {
-            			while (($line = fgets($file_o)) !== false) {
-                			echo $line . "<br>";
-            			}
-            			fclose($file_o);
-        		} else {
-            			echo "Error: Unable to open the file.";
-        		}
-    		} else {
-        		echo "Error: File does not exist.";
-    		}
+        	$file_o = fopen($file, 'r');
+            	while (($line = fgets($file_o)) !== false) {
+                	echo $line . "<br>";
+            	}
+            	fclose($file_o);
 	?>
 
 Q3-->a
