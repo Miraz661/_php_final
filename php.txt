@@ -3,21 +3,23 @@ List 3 advantages of user define function in programming language.And write a ph
 	Code Reusability: User-defined functions allow for code to be reused multiple times within a program, reducing redundancy.
 	Modularity: By breaking down a program into smaller, manageable pieces, it becomes easier to understand, debug, and test.
 	Abstraction: Functions provide a way to abstract complex operations behind a simple interface.
-	<?php$
-		function large($num1,$num2,$num3){
-			if($num1 > $num2 && $num1 > $num3){
-				return $num1;
-			}else if($num2 > $num1 && $num2 > $num 3){
-				return $num2;
-			}else{
-				return $num3;
-			}
-		}
+	<?php
     		$num1 = 10;
     		$num2 = 25;
-    		$num3 = 35;
-		$largest = large($num1,$num2,$num3):
-    		echo "Largest number is : $largest";
+    		$num3 = 15;
+    		if($num1 > $num2){
+        		if($num1 > $num3){
+        	    		echo "Largest number is : $num1 ";
+        		}else{
+            			echo "Largest number is : $num3 ";
+        		}
+    		}else{
+        		if($num2 > $num3){
+            			echo "Largest number is : $num2 ";
+        		}else{
+            			echo "Largest number is : $num3 ";
+        		}
+    		}
 	?>
 
 
@@ -36,8 +38,7 @@ Q1-->b
 	?>
 
 Q1-->c 
-	The primary reason an end user cannot see the PHP code when visiting a website built with PHP is that PHP is a server-side scripting language. 
-	This means that PHP code is executed on the server before the web page is sent to the user's web browser.
+	The primary reason an end user cannot see the PHP code when visiting a website built with PHP is that PHP is a server-side scripting language. This means that PHP code is executed on the server before the web page is sent to the user's web browser.
 
 Q2-->a
 	A PHP session is a way to store information (in variables) to be used across multiple pages in a web application. Unlike cookies, the information is not stored on the user's computer but on the server, which makes it more secure.
@@ -55,15 +56,23 @@ Q2-->a
 	?>
 
 Q2-->b
-	Web security is an essential aspect of modern web development and maintenance, aimed at protecting web applications and their users from a variety of threats.
+	Web security is an essential aspect of modern web development and maintenance, aimed at protecting web applications and their users from a variety of threats. By implementing robust security measures, adhering to best practices, and staying informed about emerging threats, organizations can significantly reduce the risk of security breaches and ensure the safety and integrity of their online services.
 Q2-->c
 	<?php
     		$file = 'myfile.txt';
-        	$file_o = fopen($file, 'r');
-            	while (($line = fgets($file_o)) !== false) {
-                	echo $line . "<br>";
-            	}
-            	fclose($file_o);
+    		if (file_exists($file)) {
+        		$file_o = fopen($file, 'r');
+        		if ($file_o) {
+            			while (($line = fgets($file_o)) !== false) {
+                			echo $line . "<br>";
+            			}
+            			fclose($file_o);
+        		} else {
+            			echo "Error: Unable to open the file.";
+        		}
+    		} else {
+        		echo "Error: File does not exist.";
+    		}
 	?>
 
 Q3-->a
